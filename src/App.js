@@ -1,16 +1,21 @@
 
-import { Login } from '@mui/icons-material';
+
 import './App.css';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
-import Dashboard from './Pages/Dashboard';
-import MainLayout from './Components/MainLayout';
 
+// import Campaigns from './pages/Campaigns';
+import Campaigns from './pages/Campaigns';
+import MainLayout from './container/components/MainLayout';
+import Test from './container/components/Test';
+import Dashboard from './pages/Dashboard';
 function App() {
   return (
    <Router>
     <Routes>
-      <Route path="/campaigns" element={<MainLayout/>}>
+      <Route path="/admin" element={<Test/>}>
          <Route index element={<Dashboard/>}/>
+         <Route path="campaigns" element={<Campaigns/>}/>
+
 
       </Route>
     </Routes>
