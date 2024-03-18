@@ -20,6 +20,8 @@ import logocommunity from '../../assets/Framecommunity.svg';
 import logoDoc from "../../assets/FrameDocs.svg";
 import logoHelp from "../../assets/Framehelp.svg";
 import logodropdown from "../../assets/Framedropdown.svg";
+import logoClose from "../../assets/Frame 1000001797right.svg";
+import logoOpen from "../../assets/Frame 1171275151open.svg";
 
 const { Header, Sider, Content } = Layout;
 const Test=()=>{
@@ -36,14 +38,14 @@ const Test=()=>{
     const navigate=useNavigate();
  
     return (
-        <Layout>
+        <Layout className='layout'>
             <Sider trigger={null} collapsible collapsed={collapsed} style={{ background: '#FDFDFD' }}>
                 <div className="logo">
                     <div className="logo-content  width: Hug (140px) height: Fill (32px) border-radius: 8px gap: 4px">
                         <span className={collapsed ? 'sm-logo' : 'lg-logo'} >Aria Real Estate </span>
                         {!collapsed && (<span className="icon-wrapper"><img className='drop' src={logodropdown} alt=""/></span> )}
                     </div>
-                    <Button className="logo-button" type="text" icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />} onClick={() => setCollapsed(!collapsed)}style={{
+                    <Button className="logo-button" type="text" icon={collapsed ? <MenuUnfoldOutlined className='menu-icon' /> : <MenuFoldOutlined className='menu-icon'/>} onClick={() => setCollapsed(!collapsed)}style={{
                     fontSize: '16px',
                     width: 'Hug (32px)',
                     height: 'Hug (32px)',

@@ -8,12 +8,14 @@ import Campaigns from './pages/Campaigns';
 import MainLayout from './container/components/MainLayout';
 import Test from './container/components/Test';
 import Dashboard from './pages/Dashboard';
+
 function App() {
   return (
    <Router>
     <Routes>
+      
       <Route path="/admin" element={<Test/>}>
-         <Route index element={<Dashboard/>}/>
+         <Route path="dashboard" index element={<Dashboard/>}/>
          <Route path="campaigns" element={<Campaigns/>}/>
 
 
